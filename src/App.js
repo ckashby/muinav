@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Button from "@material-ui/core/Button";
 
 function App() {
   return (
     <div className="App">
       <h2>Welcome to our App</h2>
-      <hr />
+      <hr style={{ width: "50%" }} />
       <a
         className="App-link"
         href="https://reactjs.org"
