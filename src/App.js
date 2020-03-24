@@ -7,6 +7,10 @@ function App() {
     <div className="App">
       <h2>Welcome to our App</h2>
       <hr style={{ width: "50%" }} />
+      <Button variant="contained" color="primary">
+        Hola amigos
+      </Button>
+      <hr style={{ width: "50%" }} />
       <a
         className="App-link"
         href="https://reactjs.org"
