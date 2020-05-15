@@ -1,0 +1,14 @@
+header {
+  color: white;
+  background-color: darkblue;
+  height: 60px;
+}
+
+h2 {
+  text-align: left;
+  padding: 30px;
+}
+
+IconButton {
+  color: white;
+}

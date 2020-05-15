@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -11,8 +11,22 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #ff6699;
+}
+
+.box-use-grid-instead {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.boxes {
+  background-color: rgb(100, 0, 95);
+  width: 300px;
+  height: 150px;
+  padding: 5em;
+  margin: 2rem auto;
 }

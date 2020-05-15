@@ -1,0 +1,63 @@
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+// import Item from "@material-ui/core/Item";
+import Button from "@material-ui/core/Button";
+
+import { IconButton } from "@material-ui/core";
+import {
+  AccessAlarm,
+  ThreeDRotation,
+  ArrowUpwardRounded
+} from "@material-ui/icons";
+
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
+import Footer from "./components/Footer/Footer";
+
+function App() {
+  return (
+    <CssBaseline>
+      <BrowserRouter>
+        <Container maxWidth="md">
+          <div className="App">
+            <Button variant="contained" color="primary">
+              Hola amigos
+            </Button>
+            <Button variant="outlined" color="secondary">
+              About Us
+            </Button>
+            <Button>Contact Us</Button>
+            <IconButton>
+              <AccessAlarm />
+              <ArrowUpwardRounded />
+              Notifications
+              <ThreeDRotation />
+            </IconButton>
+            <hr style={{ width: "100%" }} />
+            <Grid
+              container
+              direction="row"
+              justify="center"
+              alignItems="center"
+              // spacing={8}
+              gap="60px"
+            >
+              {/* <div className="boxes">Hola</div>
+              <div className="boxes">Hola</div>
+              <div className="boxes">Hola</div> */}
+            </Grid>
+            <Header />
+            <Main />
+            <Footer />
+          </div>
+        </Container>
+      </BrowserRouter>
+    </CssBaseline>
+  );
+}
+
+export default App;

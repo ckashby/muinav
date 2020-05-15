@@ -1,0 +1,19 @@
+import React from "react";
+import "./Header.css";
+import IconButton from "@material-ui/core/IconButton";
+import AccessAlarm from "@material-ui/icons/AccessAlarm";
+import DockTwoTone from "@material-ui/icons/DockTwoTone";
+
+const Header = () => {
+  return (
+    <header>
+      <IconButton>
+        <AccessAlarm style={{ color: "white" }} />
+        <span>I am the Header</span>
+        <DockTwoTone style={{ color: "white" }} />
+      </IconButton>
+    </header>
+  );
+};
+
+export default Header;
