@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, TextField, Typography } from "@material-ui/core";
+import {
+  Button,
+  FormControl,
+  FormHelperText,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
+} from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
@@ -23,6 +32,7 @@ export default function ContactForm() {
   const classes = useStyles();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = () => {
@@ -52,6 +62,16 @@ export default function ContactForm() {
           onChange={(e) => setEmail(e.target.value)}
           // fullWidth
         />
+        <Select
+          label="Age"
+          value="age"
+          onChange={(e) => setAge(e.target.value)}
+        >
+          <MenuItem value="1">1</MenuItem>
+          <MenuItem value="2">2</MenuItem>
+          <MenuItem value="3">3</MenuItem>
+          <MenuItem value="4">4</MenuItem>
+        </Select>
         <TextField
           multiline
           rows="4"
