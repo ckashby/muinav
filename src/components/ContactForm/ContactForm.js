@@ -2,34 +2,38 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
   FormControl,
   FormHelperText,
+  Input,
   InputLabel,
   MenuItem,
+  NativeSelect,
   Select,
   TextField,
   Typography,
 } from "@material-ui/core";
 
-const useStyles = makeStyles({
-  root: {
-    // minWidth: 275,
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    flexWrap: "wrap",
   },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
   },
-  title: {
-    fontSize: 14,
+  selectEmpty: {
+    marginTop: theme.spacing(2),
   },
-  pos: {
-    marginBottom: 12,
-  },
-});
+}));
 
 export default function ContactForm() {
   const classes = useStyles();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [age, setAge] = useState("");
@@ -37,11 +41,11 @@ export default function ContactForm() {
 
   const handleSubmit = () => {
     // submit the form
-    console.log("Aloha", name, email, message);
+    console.log("Aloha", name, email, age, message);
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.container}>
       <Typography variant="h3" gutterBottom>
         Contact Us
       </Typography>
@@ -62,16 +66,34 @@ export default function ContactForm() {
           onChange={(e) => setEmail(e.target.value)}
           // fullWidth
         />
-        <Select
-          label="Age"
-          value="age"
-          onChange={(e) => setAge(e.target.value)}
-        >
-          <MenuItem value="1">1</MenuItem>
-          <MenuItem value="2">2</MenuItem>
-          <MenuItem value="3">3</MenuItem>
-          <MenuItem value="4">4</MenuItem>
-        </Select>
+
+        <FormControl variant="outlined" className={classes.formControl}>
+          <InputLabel htmlFor="outlined-age-native-simple">Age</InputLabel>
+          <Select
+            native
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            label="Age"
+            inputProps={{
+              name: "age",
+              id: "outlined-age-native-simple",
+            }}
+          >
+            <option aria-label="None" value="" />
+            <option value={10}>Ten</option>
+            <option value={20}>Twenty</option>
+            <option value={30}>Thirty</option>
+          </Select>
+          <FormHelperText>Helper text</FormHelperText>
+        </FormControl>
+        <FormControl>
+          <TextField id="select" label="New Age" value="20" select>
+            <MenuItem value="10">Ten</MenuItem>
+            <MenuItem value="20">Twenty</MenuItem>
+            <MenuItem value="30">Thirty</MenuItem>
+            <MenuItem value="40">Forty</MenuItem>
+          </TextField>
+        </FormControl>
         <TextField
           multiline
           rows="4"
