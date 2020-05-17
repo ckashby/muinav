@@ -1,11 +1,18 @@
 import React from "react";
 import { Container, Slider, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import SimpleFade from "../Transitions/SimpleFade/SimpleFade";
+import SimpleZoom from "../Transitions/SimpleZoom/SimpleZoom";
+import { findByLabelText } from "@testing-library/react";
+import FloatingActionButtons from "../Fab/Fab";
 
 export default function Hero() {
   const useStyles = makeStyles((theme) => ({
     root: {
       padding: "80px",
+    },
+    boxes: {
+      display: "flex",
     },
   }));
 
@@ -26,6 +33,11 @@ export default function Hero() {
           air plant post-ironic banh mi. Bespoke single-origin coffee mlkshk
           before they sold out cronut selvage.
         </Typography>
+        <div className={classes.boxes}>
+          <SimpleFade />
+          <SimpleZoom />
+          <FloatingActionButtons />
+        </div>
       </div>
     </Container>
   );
