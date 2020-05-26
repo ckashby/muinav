@@ -3,8 +3,10 @@ import { Container, Slider, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import SimpleFade from "../Transitions/SimpleFade/SimpleFade";
 import SimpleZoom from "../Transitions/SimpleZoom/SimpleZoom";
-import { findByLabelText } from "@testing-library/react";
+// import { findByLabelText } from "@testing-library/react";
 import FloatingActionButtons from "../Fab/Fab";
+// import TransferList from "../TransferLists/TransferLists";
+// import SwitchLabels from "../SwitchLabels/SwitchLabels";
 
 export default function Hero() {
   const useStyles = makeStyles((theme) => ({
