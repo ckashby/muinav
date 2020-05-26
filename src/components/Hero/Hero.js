@@ -24,7 +24,7 @@ export default function Hero() {
     <Container maxWidth="md">
       <div className={classes.root}>
         <Typography variant="h2" color="textSecondary" gutterBottom>
-          Material UI Demo
+          Material UI Library
         </Typography>
         <Slider min="0" max="50" color="secondary" />
         <Typography variant="body1" color="primary">
