@@ -34,7 +34,6 @@ export const loginForm = [
 
 // -------------------------------------------  FormComp.js
 import React from "react";
-
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import classes from "./Form.module.css";

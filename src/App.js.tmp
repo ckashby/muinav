@@ -3,25 +3,31 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Button, Container, IconButton, Typography } from "@material-ui/core";
+import {
+  AccessAlarm,
+  ThreeDRotation,
+  ArrowUpwardRounded,
+} from "@material-ui/icons";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
-
-// import HomePage from "./pages/HomePage/HomePage";
-// import UserPage from "./pages/UserPage/UserPage";
-import RootPage from "./pages/RootPage/RootPage";
-import AboutPage from "./pages/AboutPage/AboutPage";
+import Blog from "./components/Blog/Blog";
+import Card from "./components/Card/Card";
+import ContactForm from "./components/ContactForm/ContactForm";
+import HomePage from "./pages/HomePage/HomePage";
+import UserPage from "./pages/UserPage/UserPage";
 
 function App() {
   return (
     <CssBaseline>
       <BrowserRouter>
         <Container>
-          <Route path="/" exact component={RootPage} />
-          <Route path="/about" exact component={AboutPage} />
           <Header />
           <Hero />
+          <Blog />
+          <Card />
+          <ContactForm />
           <Footer />
         </Container>
       </BrowserRouter>

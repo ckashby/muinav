@@ -5,7 +5,7 @@ class UserPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: {}
+      user: {},
     };
     this.userService = new UserService();
   }
@@ -14,7 +14,7 @@ class UserPage extends Component {
     console.log(this.props.match.params);
     const id = this.props.match.params.id;
 
-    this.userService.getUser(id).then(response => {
+    this.userService.getUser(id).then((response) => {
       this.setState({ user: response });
     });
   }
