@@ -26,7 +26,7 @@ export default function Header() {
           </IconButton>
           <Typography variant="h6" color="inherit">
             <Link color="inherit" to="/">
-              MaterialUI
+              Material-UI and Styled Components
             </Link>{" "}
             <IconButton>
               <AccessAlarmTwoTone color="secondary" />
