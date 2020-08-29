@@ -35,7 +35,6 @@ export default function Hero() {
         <Typography variant="h2" color="textSecondary" gutterBottom>
           Material UI Library
         </Typography>
-        <Slider min="0" max="50" color="secondary" />
         <Typography variant="body1" color="primary">
           Tote bag knausgaard succulents. Prism pok pok mumblecore, copper mug
           vinyl tacos put a bird on it tumblr bitters. Raclette fixie cloud

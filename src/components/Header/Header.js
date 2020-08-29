@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   AppBar,
   IconButton,
@@ -6,7 +7,14 @@ import {
   Typography,
   Container,
 } from "@material-ui/core";
-import { AccessAlarmTwoTone, PhoneAndroid } from "@material-ui/icons";
+import {
+  AccountBalance,
+  AccessAlarmTwoTone,
+  PhoneAndroid,
+} from "@material-ui/icons";
+
+import AdbOutlinedIcon from "@material-ui/icons/AdbOutlined";
+import AirportShuttleOutlinedIcon from "@material-ui/icons/AirportShuttleOutlined";
 
 export default function Header() {
   return (
@@ -14,10 +22,23 @@ export default function Header() {
       <Container maxWidth="xl">
         <Toolbar>
           <IconButton>
-            <PhoneAndroid color="secondary" />
+            <AirportShuttleOutlinedIcon color="secondary" />
           </IconButton>
           <Typography variant="h6" color="inherit">
-            Material UI Demo
+            <Link color="inherit" to="/">
+              MaterialUI
+            </Link>{" "}
+            <IconButton>
+              <AccessAlarmTwoTone color="secondary" />
+            </IconButton>
+            <Link to="/about">About</Link>
+            <IconButton>
+              <AccountBalance color="secondary" />{" "}
+            </IconButton>
+            <Link to="/contact">Contact</Link>
+            <IconButton>
+              <AdbOutlinedIcon color="secondary" />
+            </IconButton>
           </Typography>
         </Toolbar>
       </Container>

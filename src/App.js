@@ -12,6 +12,7 @@ import Hero from "./components/Hero/Hero";
 // import UserPage from "./pages/UserPage/UserPage";
 import RootPage from "./pages/RootPage/RootPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Container>
           <Route path="/" exact component={RootPage} />
           <Route path="/about" exact component={AboutPage} />
+          <Route path="/contact" exact component={ContactPage} />
           <Header />
           <Hero />
           <Footer />
