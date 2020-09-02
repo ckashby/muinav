@@ -25,7 +25,7 @@ export default function Header() {
             <AirportShuttleOutlinedIcon color="secondary" />
           </IconButton>
           <Typography variant="h6" color="inherit">
-            <Link color="inherit" to="/">
+            <Link color="secondary" to="/">
               Material-UI and Styled Components
             </Link>{" "}
             <IconButton>

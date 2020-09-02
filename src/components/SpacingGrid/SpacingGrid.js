@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SpacingGrid = () => {
-  return <h1>Spaced Out</h1>;
+  return <h1>SpacingGrid</h1>;
 };
 
 export default SpacingGrid;

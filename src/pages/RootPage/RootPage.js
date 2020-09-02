@@ -6,7 +6,6 @@ export default function () {
     <div>
       <h1>Root Page</h1>
       <h1>Root Page</h1>
-      <h1>Root Page</h1>
       <SpacingGrid />
     </div>
   );

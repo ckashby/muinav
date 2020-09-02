@@ -33,7 +33,7 @@ export default function Hero() {
     <Container maxWidth="md">
       <div className={classes.root}>
         <Typography variant="h2" color="textSecondary" gutterBottom>
-          Material UI Library
+          Material UI React Library
         </Typography>
         <Typography variant="body1" color="primary">
           Tote bag knausgaard succulents. Prism pok pok mumblecore, copper mug
